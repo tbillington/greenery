@@ -1,0 +1,24 @@
+{
+  "name": "greenery",
+  "version": "0.1.0",
+  "description": "",
+  "main": "build/greenery.js",
+  "scripts": {
+    "prebuild": "rm -rf build",
+    "build": "tsc",
+    "postbuild": "terser build/greenery.js --source-map \"content='build/greenery.js.map',url='greenery.min.js.map'\" -o build/greenery.min.js -m"
+  },
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "prettier": "^2.2.1",
+    "terser": "^5.5.1",
+    "typescript": "^4.1.3"
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "trailingComma": "all",
+    "semi": false,
+    "singleQuote": true
+  }
+}
